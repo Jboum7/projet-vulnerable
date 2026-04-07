@@ -42,7 +42,7 @@ class AuthController extends Controller
             $user = $userRepository->findByEmail($email);
 
             if (!$user) {
-                throw new \Exception("User not found", 404);
+                throw new \Exception('Invalid Credentials', 400);
             }
 
             if (password_verify($password, $user->getPassword())) {
