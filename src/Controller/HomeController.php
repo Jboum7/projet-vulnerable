@@ -9,6 +9,10 @@ class HomeController extends Controller
 {
     public function index(): void
     {
+        /**
+         * @todo
+         * - Filtrer le input avec la methode filter_input
+         * */
         $q = isset($_GET['q']) ? $_GET['q'] : '';
 
         $productRepository = new ProductRepository();
